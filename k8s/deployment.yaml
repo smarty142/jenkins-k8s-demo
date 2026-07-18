@@ -5,7 +5,7 @@ metadata:
   name: flask-app
 
 spec:
-  replicas: 2
+  replicas: 1
 
   selector:
     matchLabels:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: flask-app: v1
-        imagePullPolicy: IfNotPresent
+        image: flask-app:12
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
